@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-16">
     <title>Github Page</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
@@ -11,8 +12,8 @@
     <div id="content">
 
     </div>
-    <div id="footer">
-        © Eli - <label><script>new Date().getFullYear()</script></label>
+    <div id="footer" onmouseover="document.getElementById('year').innerHTML = new Date().getFullYear()">
+        © Eli - <div id="year"></div>
     </div>
 </body>
 </html> 

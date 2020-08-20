@@ -3,4 +3,27 @@ html
     color: #ddd;
     background: #000;
     font-size: 12px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#footer
+{
+    vertical-align: bottom;
+    position: absolute;
+    font-size: 0.8em;
+    padding: 5px;
+    width: 100%;
+}
+#footer .div
+{
+    display: inline;
 }
