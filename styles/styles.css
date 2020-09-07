@@ -1,12 +1,21 @@
-html
+:root
 {
-    color: #ddd;
-    background: #000;
+    --primary-color: #11b4ff;
+    --secondary-color: #ff5811;
+    --primary-color-dark: #1495d1;
+    --secondary-color-dark: #cc4202;
+    --dark: #000;
+    --light: #fff;
     font-size: 12px;
-    height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
+}
+html
+{
+    color: var(--light);
+    background: var(--dark);
+    height: 100%;
+    width: 100%;
 }
 body
 {
@@ -15,13 +24,86 @@ body
     margin: 0;
     padding: 0;
 }
+a
+{
+    color: var(--light);
+}
+table
+{
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: var(--dark);
+    background-color: var(--primary-color);
+    filter: drop-shadow(0 0.2em 0.2em var(--secondary-color));
+}
+li
+{
+    background-color: var(--primary-color);
+    float: left;
+}
+li a
+{
+    display: block;
+    text-align: center;
+    padding: 0.5em 0;
+    width: 5em;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+li a:hover 
+{
+    color: var(--dark);
+    background-color: var(--primary-color-dark);
+}
+li a .active
+{
+    background-color: var(--secondary-color);
+}
+.right
+{
+    float: right;
+}
+#content
+{
+    height: calc(100% - 6.5em);
+    width: calc(100% - 2em);
+    margin: 0.6em auto;
+    padding: 0.4em;
+    /* border: solid 0.2em var(--secondary-color); */
+}
+#personalData
+{
+    width: 100%;
+}
+#personalData td
+{
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0.2em;
+    border: 0.1em solid var(--primary-color);
+}#personalData tr td:first-child
+{
+    width: 6em;
+}
+#image
+{
+    width: 40%;
+}
 #footer
 {
-    vertical-align: bottom;
+    color: var(--light);
     position: absolute;
+    bottom: 0;
     font-size: 0.8em;
-    padding: 5px;
-    width: 100%;
+    padding: 0.5em;
 }
 #footer div
 {
