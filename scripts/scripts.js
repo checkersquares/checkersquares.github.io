@@ -23,5 +23,6 @@ function toggleActive(id = "")
     {
         var el = document.getElementById(id);
         el.classList.add("active");
+        scroll(-50, 0);
     }
 }

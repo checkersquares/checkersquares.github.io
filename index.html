@@ -8,19 +8,15 @@
     <script src="scripts/init.js"></script>
 </head>
 <body>
-    <div id="top">🥚</div>
-    <div id="menu-bar">
-        <ul>
-            <li><a id="nav-home" href="#top" onclick="toggleActive()">Home</a></li>
-            <li><a id="nav-personal" href="#jump-personal" onclick="toggleActive('nav-personal')">Personal Data</a></li>
-            <li><a id="nav-experiences" href="#jump-experiences" onclick="toggleActive('nav-experiences')">Experiences</a></li>
-            <li><a id="nav-languages" href="#jump-languages" onclick="toggleActive('nav-languages')">Languages</a></li>
-            <li><a id="nav-skills" href="#jump-skills" onclick="toggleActive('nav-skills')">Skills</a></li>
-            <li class="right"><a href="#footer" onclick="toggleActive()">End</a></li>
-        </ul>
-    </div>
+    <nav id="menu-bar">
+        <a id="nav-home" href="#jump-top" onclick="toggleActive('nav-home')">Home</a>
+        <a id="nav-personal" href="#jump-personal" onclick="toggleActive('nav-personal')">Personal Data</a>
+        <a id="nav-experiences" href="#jump-experiences" onclick="toggleActive('nav-experiences')">Experiences</a>
+        <a id="nav-languages" href="#jump-languages" onclick="toggleActive('nav-languages')">Languages</a>
+        <a id="nav-skills" href="#jump-skills" onclick="toggleActive('nav-skills')">Skills</a>
+    </nav>
     <div id="content">
-        <h1>CV</h1>
+        <h1 id="jump-top">CV</h1>
         <div id="jump-personal" class="section">
             <h2>Personal Data</h2>
             <table id="personal-data" class="table01">
@@ -129,8 +125,8 @@
                 </tr>
             </table>
         </div>
-        <h1>Skills</h1>
-        <div id="jump-skills" class="section">
+        <h1 id="jump-skills" >Skills</h1>
+        <divclass="section">
             <h2>Legend</h2>
             <table id="legend" class="legend">
                 <tr>
@@ -167,31 +163,67 @@
                     <th colspan="2">Skill Level</th>
                 </tr>
                 <tr>
-                    <td>1</td>
+                    <td>C#</td>
                     <td>Theoretical Knowledge</td>
-                    <td></td>
-                    <td><progress value="1" max="5"></progress></td>
+                    <td>5</td>
+                    <td><progress value="5" max="5"></progress></td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td>SQL</td>
                     <td>Basic Knowledge</td>
                     <td></td>
                     <td><progress value="2" max="5"></progress></td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td>Python</td>
                     <td>User Knowledge</td>
                     <td></td>
                     <td><progress value="3" max="5"></progress></td>
                 </tr>
                 <tr>
-                    <td>4</td>
+                    <td>Javascript</td>
                     <td>Advanced Knowledge</td>
                     <td></td>
                     <td><progress value="4" max="5"></progress></td>
                 </tr>
                 <tr>
-                    <td>5</td>
+                    <td>C++</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>SQLite</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>Powershell</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>HTML & CSS</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>Visual Basic</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>Java</td>
                     <td>Confidence</td>
                     <td></td>
                     <td><progress value="5" max="5"></progress></td>
@@ -274,9 +306,9 @@
                 </tr>
             </table>
         </div>
-    </div>
-    <div id="footer" >
-        © Eli 2020 - <div id="year"></div>
+        <div id="footer">
+            © Eli 2020 - <div id="year"></div>
+        </div>
     </div>
 </body>
 </html> 
