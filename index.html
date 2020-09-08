@@ -8,37 +8,272 @@
     <script src="scripts/init.js"></script>
 </head>
 <body>
+    <div id="top">🥚</div>
     <div id="menu-bar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">About</a></li>
-            <li class="right"><a href="#right">Right</a></li>
+            <li><a id="nav-home" href="#top" onclick="toggleActive()">Home</a></li>
+            <li><a id="nav-personal" href="#jump-personal" onclick="toggleActive('nav-personal')">Personal Data</a></li>
+            <li><a id="nav-experiences" href="#jump-experiences" onclick="toggleActive('nav-experiences')">Experiences</a></li>
+            <li><a id="nav-languages" href="#jump-languages" onclick="toggleActive('nav-languages')">Languages</a></li>
+            <li><a id="nav-skills" href="#jump-skills" onclick="toggleActive('nav-skills')">Skills</a></li>
+            <li class="right"><a href="#footer" onclick="toggleActive()">End</a></li>
         </ul>
     </div>
     <div id="content">
-        <table id="personalData">
-            <tr>
-                <td>First Name</td>
-                <td>Elias</td>
-                <td id="image" rowspan="5"></td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>Styner</td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>Styner</td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>Styner</td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td>Styner</td>
-            </tr>
-        </table>
+        <h1>CV</h1>
+        <div id="jump-personal" class="section">
+            <h2>Personal Data</h2>
+            <table id="personal-data" class="table01">
+                <tr>
+                    <td>😶</td>
+                    <td>Name</td>
+                    <td>Elias Styner</td>
+                    <td id="image" rowspan="6"><img src="images/headshot.jpg"/></td>
+                </tr>
+                <tr>
+                    <td>🎂</td>
+                    <td>Birthdate</td>
+                    <td>29.09.1993</td>
+                </tr>
+                <tr>
+                    <td>💍</td>
+                    <td>Marital Status</td>
+                    <td>Single</td>
+                </tr>
+                <tr>
+                    <td>🏠</td>
+                    <td>Place of Birth</td>
+                    <td>Argovia, Switzerland</td>
+                </tr>
+                <tr>
+                    <td>🏡</td>
+                    <td>Current Home</td>
+                    <td>Berne, Switzerland</td>
+                </tr>
+                <tr>
+                    <td>📧</td>
+                    <td>Email</td>
+                    <td><a href="mailto:elias.styner@gmail.com">elias.styner@gmail.com</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="jump-experiences" class="section">
+            <h2>Job Experiences</h2>
+            <table id="experiences" class="table01">
+                <tr>
+                    <td>⦿</td>
+                    <td>2018 – 2020</td>
+                    <td>Completion of the Swiss national certification (EFZ) as a software developer with the Band Genossenschaft, Berne</td>
+                </tr>
+                <tr>
+                    <td>⦿</td>
+                    <td>2016 – 2018</td>
+                    <td>Apprenticeship as a software developer with the Hint AG, Lenzburg</td>
+                </tr>
+                <tr>
+                    <td>⦿</td>
+                    <td>2013 – 2014</td>
+                    <td>Military service as an Information Technology Pioneer</td>
+                </tr>
+            </table>
+            <h2>School</h2>
+            <table id="school" class="table01">
+                <tr>
+                    <td>🏫</td>
+                    <td>2014 – 2016</td>
+                    <td>Vocational school for computer science at the IBZ Aarau</td>
+                </tr>
+                <tr>
+                    <td>🏫</td>
+                    <td>2010 – 2013</td>
+                    <td>Vocational school of commerce at the CEFF commerce, Tramelan</td>
+                </tr>
+                <tr>
+                    <td>🏫</td>
+                    <td>2007 – 2010</td>
+                    <td>High school at the ecole d'humanité, Berne</td>
+                </tr>
+                <tr>
+                    <td>🏫</td>
+                    <td>2005 – 2007</td>
+                    <td>Secondary School</td>
+                </tr>
+                <tr>
+                    <td>🏫</td>
+                    <td>2000 – 2005</td>
+                    <td>Primary School</td>
+                </tr>
+            </table>
+        </div>
+        <div id="jump-languages" class="section">
+            <h2>Languages</h2>
+            <table id="languages" class="table01">
+                <tr>
+                    <td>💬</td>
+                    <td>German</td>
+                    <td>Mother tongue</td>
+                </tr>
+                <tr>
+                    <td>💬</td>
+                    <td>English</td>
+                    <td>Like mother tongue</td>
+                </tr>
+                <tr>
+                    <td>💬</td>
+                    <td>French</td>
+                    <td>
+                        Comprehension: Pretty good
+                        <br>
+                        Writing / Speaking: Pretty bad
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h1>Skills</h1>
+        <div id="jump-skills" class="section">
+            <h2>Legend</h2>
+            <table id="legend" class="legend">
+                <tr>
+                    <td>1</td>
+                    <td>Theoretical Knowledge</td>
+                    <td><progress value="1" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Basic Knowledge</td>
+                    <td><progress value="2" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>User Knowledge</td>
+                    <td><progress value="3" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Advanced Knowledge</td>
+                    <td><progress value="4" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Confidence</td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+            </table>
+            <h2>Programming Languages</h2>
+            <table id="programming-languages" class="table02">
+                <tr>
+                    <th>Language</th>
+                    <th>Applications</th>
+                    <th colspan="2">Skill Level</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Theoretical Knowledge</td>
+                    <td></td>
+                    <td><progress value="1" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Basic Knowledge</td>
+                    <td></td>
+                    <td><progress value="2" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>User Knowledge</td>
+                    <td></td>
+                    <td><progress value="3" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Advanced Knowledge</td>
+                    <td></td>
+                    <td><progress value="4" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+            </table>
+            <h2>Operating Systems</h2>
+            <table id="operating-systems" class="table02">
+                <tr>
+                    <th>Language</th>
+                    <th>Applications</th>
+                    <th colspan="2">Skill Level</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Theoretical Knowledge</td>
+                    <td></td>
+                    <td><progress value="1" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Basic Knowledge</td>
+                    <td></td>
+                    <td><progress value="2" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>User Knowledge</td>
+                    <td></td>
+                    <td><progress value="3" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Advanced Knowledge</td>
+                    <td></td>
+                    <td><progress value="4" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+            </table>
+            <h2>Tools</h2>
+            <table id="tools" class="table02">
+                <tr>
+                    <th>Language</th>
+                    <th>Applications</th>
+                    <th colspan="2">Skill Level</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Theoretical Knowledge</td>
+                    <td></td>
+                    <td><progress value="1" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Basic Knowledge</td>
+                    <td></td>
+                    <td><progress value="2" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>User Knowledge</td>
+                    <td></td>
+                    <td><progress value="3" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Advanced Knowledge</td>
+                    <td></td>
+                    <td><progress value="4" max="5"></progress></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Confidence</td>
+                    <td></td>
+                    <td><progress value="5" max="5"></progress></td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div id="footer" >
         © Eli 2020 - <div id="year"></div>

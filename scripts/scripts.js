@@ -13,3 +13,15 @@ function enterTextIntoElement(id, text)
 {
     document.getElementById(id).innerHTML = text;
 }
+function toggleActive(id = "")
+{
+    var old = document.getElementsByClassName("active");
+    [].slice.call(old).forEach(element => {
+        element.classList.remove("active");
+    });
+    if (id !== "") 
+    {
+        var el = document.getElementById(id);
+        el.classList.add("active");
+    }
+}

@@ -1,5 +1,6 @@
 :root
 {
+    font-family: a;
     --primary-color: #11b4ff;
     --secondary-color: #ff5811;
     --primary-color-dark: #1495d1;
@@ -14,25 +15,55 @@ html
 {
     color: var(--light);
     background: var(--dark);
-    height: 100%;
     width: 100%;
+    min-width: 500px;
 }
 body
 {
-    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+}
+h1
+{
+    margin: 0 0 0 1.8em;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+h2
+{
+    margin: 0 0 0.5em 3em;
+    font-size: 1.2em;
 }
 a
 {
     color: var(--light);
+    text-decoration: none;
+}
+img
+{
+    width:100%;
 }
 table
 {
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    margin: 1em 0;
     border-collapse: collapse;
+}
+td, th
+{
+    text-align: left;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0.2em;
+    border: 0.1em solid var(--secondary-color);
+}
+caption
+{
+    font-size: 1em;
+    font-weight: bold;
+    margin:0;
+    padding: 0.2em;
 }
 ul
 {
@@ -53,19 +84,28 @@ li a
 {
     display: block;
     text-align: center;
-    padding: 0.5em 0;
-    width: 5em;
+    padding: 0.5em;
     font-size: 1.5em;
-    text-decoration: none;
 }
-li a:hover 
+li a:hover:not(.active)
 {
     color: var(--dark);
     background-color: var(--primary-color-dark);
 }
-li a .active
+progress
+{
+    background-color: var(--primary-color);
+}
+.active
 {
     background-color: var(--secondary-color);
+}
+#menu-bar
+{
+    position: fixed;
+    top:0;
+    width: 100%;
+    min-width: 500px;
 }
 .right
 {
@@ -74,36 +114,56 @@ li a .active
 #content
 {
     height: calc(100% - 6.5em);
-    width: calc(100% - 2em);
-    margin: 0.6em auto;
-    padding: 0.4em;
-    /* border: solid 0.2em var(--secondary-color); */
+    width: calc(100% - 1em);
+    margin: 2em auto 0 auto;
 }
-#personalData
+.section
+{
+    margin: 1em 0;
+    border-bottom: solid 2px var(--primary-color);
+}
+#personal-data
 {
     width: 100%;
 }
-#personalData td
+.table01 tr td:first-child
 {
-    font-size: 1.5em;
-    margin: 0;
-    padding: 0.2em;
-    border: 0.1em solid var(--primary-color);
-}#personalData tr td:first-child
+    width: 2em;
+    text-align: center;
+    border: none;
+}
+.table01 tr td:nth-child(2)
 {
     width: 6em;
 }
+.table02 th
+{
+    color: var(--primary-color);
+}
+.table02 tr td:last-child
+{
+    width: 5em;
+}
+.legend tr td:first-child
+{
+    width: 2em;
+    text-align: center;
+}
+.legend tr td:last-child
+{
+    width: 5em;
+}
 #image
 {
-    width: 40%;
+    top:0;
+    width: 20%;
 }
 #footer
 {
     color: var(--light);
-    position: absolute;
-    bottom: 0;
     font-size: 0.8em;
     padding: 0.5em;
+    filter: drop-shadow(0 0 0.4em var(--secondary-color));
 }
 #footer div
 {
