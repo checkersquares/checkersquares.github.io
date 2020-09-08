@@ -63,21 +63,23 @@ nav a:hover
 }
 .section
 {
-    margin: 1em 0;
-    border-bottom: solid 2px var(--primary-color);
+    margin-bottom: 2em;
 }
 h1
 {
     margin: 0;
     padding: 0 1.8em;
-    width: 100%;
+    width: calc(100% - 3.6em);
     font-size: 2em;
     background-color: var(--primary-color-dark);
 }
 h2
 {
-    margin: 0 0 0.5em 3em;
+    margin:0;
+    padding: 0.2em;
     font-size: 1.2em;
+    width: calc(100% - 0.4em);
+    background-color: var(--secondary-color);
 }
 a
 {
@@ -91,7 +93,7 @@ img
 table
 {
     width: 100%;
-    margin: 0.5em 0;
+    margin: 0 0 1em 0;
     border-collapse: collapse;
 }
 td, th
@@ -147,7 +149,6 @@ progress
 }
 #image
 {
-    top:0;
     width: 20%;
 }
 #footer
