@@ -1,15 +1,31 @@
 :root
 {
     font-family: Arial;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
     --primary-color: #11b4ff;
     --secondary-color: #ff5811;
     --primary-color-dark: #1495d1;
     --secondary-color-dark: #cc4202;
     --dark: #000;
     --light: #fff;
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
+    --column-char: 20px;
+    --column-name: 100px;
+    --column-bar: 80px;
+    --padding-small: 2px;
+    --padding-medium: 5px;
+    --padding-large: 10px;
+    --padding-xl: 20px;
+    --margin-small: 0.2em;
+    --margin-medium: 1em;
+    --margin-large: 2em;
+    --font-size-tiny: 0.8em;
+    --font-size-medium: 1.5em;
+    --font-size-large: 2em;
+    --border-thickness-thin: 1px;
+    --border-thickness-medium: 2px;
+    --border-thickness-thick: 4px;
 }
 html
 {
@@ -36,8 +52,8 @@ nav
 }
 nav a
 {
-    padding: 0.5em;
-    font-size: 1.5em;
+    padding: var(--padding-large);
+    font-size: var(--font-size-medium);
     float: left;
 }
 nav a:hover
@@ -63,22 +79,22 @@ nav a:hover
 }
 .section
 {
-    margin-bottom: 2em;
+    margin-bottom: var(--margin-medium);
+}
+h1, h2
+{
+    margin: 0;
+    padding: var(--padding-medium);
+    width: calc(100% - (2*var(--padding-medium)));
 }
 h1
 {
-    margin: 0;
-    padding: 0 1.8em;
-    width: calc(100% - 3.6em);
-    font-size: 2em;
+    font-size: var(--font-size-large);
     background-color: var(--primary-color-dark);
 }
 h2
 {
-    margin:0;
-    padding: 0.2em;
-    font-size: 1.2em;
-    width: calc(100% - 0.4em);
+    font-size: inherit;
     background-color: var(--secondary-color);
 }
 a
@@ -89,19 +105,19 @@ a
 img
 {
     width:100%;
+    margin: auto;
 }
 table
 {
     width: 100%;
-    margin: 0 0 1em 0;
+    margin: 0 0 var(--margin-medium) 0;
     border-collapse: collapse;
 }
 td, th
 {
-    font-size: 1.2em;
     margin: 0;
-    padding: 0.2em;
-    border: 0.1em solid var(--secondary-color);
+    padding: var(--padding-small);
+    border: var(--border-thickness-thin) solid var(--secondary-color);
 }
 progress
 {
@@ -113,22 +129,22 @@ progress
 }
 .table01 tr td:first-child
 {
-    width: 2em;
+    width: var(--column-char);
     text-align: center;
     border: none;
 }
 .table01 tr td:nth-child(2)
 {
-    width: 6em;
+    width: var(--column-name);
 }
 .legend tr td:first-child
 {
-    width: 2em;
+    width: var(--column-char);
     text-align: center;
 }
 .legend tr td:last-child
 {
-    width: 5em;
+    width: var(--column-name);
 }
 .table02 th
 {
@@ -136,26 +152,26 @@ progress
 }
 .table02 td:first-child
 {
-    width: 8em;
+    width: calc(var(--column-name) + var(--column-char));
 }
 .table02 tr td:nth-child(3)
 {
     text-align: center;
-    width: 1em;
+    width: var(--column-char);
 }
 .table02 tr td:last-child
 {
-    width: 8em;
+    width: var(--column-name);
 }
 #image
 {
-    width: 20%;
+    width: calc(var(--column-name)*1.2);
 }
 #footer
 {
     color: var(--light);
-    font-size: 0.8em;
-    padding: 0.5em;
+    font-size: var(--font-size-tiny);
+    padding: var(--padding-small);
 }
 #footer div
 {
